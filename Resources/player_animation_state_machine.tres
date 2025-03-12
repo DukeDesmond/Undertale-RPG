@@ -1,0 +1,45 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=10 format=3 uid="uid://h2b4l4gerrtv"]
+
+[ext_resource type="AnimationNodeBlendSpace2D" uid="uid://qs6bl66cio7i" path="res://Resources/player_walk_blend.tres" id="1_ieydj"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_h4iuc"]
+animation = &"idle_down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fd4e3"]
+animation = &"idle_up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qqcod"]
+animation = &"idle_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_igrcy"]
+animation = &"idle_left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_fs7ks"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_h4iuc")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_fd4e3")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_qqcod")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_igrcy")
+blend_point_3/pos = Vector2(-1, 0)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_olqyp"]
+advance_mode = 2
+advance_expression = "velocity"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wpjfl"]
+advance_mode = 2
+advance_expression = "!velocity"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_h4iuc"]
+advance_mode = 2
+
+[resource]
+states/Idle/node = SubResource("AnimationNodeBlendSpace2D_fs7ks")
+states/Idle/position = Vector2(416, 251.333)
+states/Start/position = Vector2(242.667, 251.16)
+states/Walk/node = ExtResource("1_ieydj")
+states/Walk/position = Vector2(412.667, 74.6667)
+transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_olqyp"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_wpjfl"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_h4iuc")]
