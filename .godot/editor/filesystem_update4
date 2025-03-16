@@ -1,3 +1,3 @@
 res://Scenes/player.tscn
-res://Scripts/player_animation_tree.gd
-res://Scripts/player.gd
+res://Resources/player_walk_blend.tres
+res://Resources/player_animation_state_machine.tres

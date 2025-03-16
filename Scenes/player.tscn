@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cnag73hemblrr"]
+[gd_scene load_steps=29 format=3 uid="uid://cnag73hemblrr"]
 
 [ext_resource type="Script" uid="uid://byejxma2rftwl" path="res://Scripts/player.gd" id="1_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://c51osajpdtfw0" path="res://Assets/Characters/NobleGirl/Original/FrontWalk/NobleGirlFoward1.png" id="1_v0iea"]
@@ -84,6 +84,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 16)]
+}
 
 [sub_resource type="Animation" id="Animation_fkybt"]
 resource_name = "idle_down"
@@ -147,6 +159,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 15)]
 }
 
 [sub_resource type="Animation" id="Animation_8erm5"]
@@ -212,6 +236,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_f1ek2"]
 resource_name = "idle_right"
@@ -275,6 +311,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_3smsa"]
@@ -340,6 +388,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -15)]
+}
 
 [sub_resource type="Animation" id="Animation_olqyp"]
 resource_name = "walk_down"
@@ -403,6 +463,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 15)]
 }
 
 [sub_resource type="Animation" id="Animation_2ijsl"]
@@ -468,6 +540,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_bi64h"]
 resource_name = "walk_right"
@@ -531,6 +615,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_wpjfl"]
@@ -596,6 +692,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -15)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tx1dd"]
 _data = {
@@ -610,11 +718,16 @@ _data = {
 &"walk_up": SubResource("Animation_wpjfl")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h4iuc"]
+radius = 8.0
+height = 34.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fd4e3"]
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_7dp3o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(580, 288)
 texture = ExtResource("1_v0iea")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
@@ -634,3 +747,14 @@ libraries = {
 script = ExtResource("13_ukyrk")
 animation_tree = NodePath("../AnimationTree")
 player = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_h4iuc")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 16)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_fd4e3")

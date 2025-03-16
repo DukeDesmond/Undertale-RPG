@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1741768914
+::res://::1741855091
 icon.svg::CompressedTexture2D/CompressedTexture2D::9151216633579076097::1741762713::1741762721::1::::<><><>0<>0<>5f0ce6eb55a0fa62279bb395dbc7bf92<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1741764044
 ::res://Assets/Characters/::1741763983
@@ -244,10 +244,13 @@ Tree1b.png::CompressedTexture2D/CompressedTexture2D::9178240460001929880::174049
 Tree2a.png::CompressedTexture2D/CompressedTexture2D::6007454829602623821::1740492884::1741764054::1::::<><><>0<>0<>69df6c2a6e4500a70c3891029ab05947<>res://.godot/imported/Tree2a.png-1fa5136d93b7db77d4b27263ecd22583.ctex::
 Tree2b.png::CompressedTexture2D/CompressedTexture2D::1975215382798861325::1740492904::1741764054::1::::<><><>0<>0<>86ad0e2b7d6de6590fdef3ca6042ed75<>res://.godot/imported/Tree2b.png-7906dcc1bcb07d942004de8d6a74777d.ctex::
 TreesAndBrushesSpriteSheet.png::CompressedTexture2D/CompressedTexture2D::8716801822560721688::1740492769::1741764054::1::::<><><>0<>0<>4db1f92b23c35a8a244c80a22331b7ad<>res://.godot/imported/TreesAndBrushesSpriteSheet.png-17cc23aa1bef87035afe8bf4932ddb2a.ctex::
-::res://Scenes/::1741768857
-player.tscn::PackedScene::5685719263707443847::1741768857::0::1::::<><><>0<>0<><>::uid://bvjgmg4wcbyj2::::res://Scripts/player.gd<>uid://c51osajpdtfw0::::res://Assets/Characters/NobleGirl/Original/FrontWalk/NobleGirlFoward1.png<>uid://buea3pdqvgfgm::::res://Assets/Characters/NobleGirl/Original/BackWalk/NobleGirlBack1.png<>uid://c66big0n4ol5n::::res://Assets/Characters/NobleGirl/Original/SideWalk/NobleGirlSide1.png<>uid://cyhmgr8suoew7::::res://Assets/Characters/NobleGirl/Original/FrontWalk/NobleGirlFoward2.png<>uid://eiygn5ab8diu::::res://Assets/Characters/NobleGirl/Original/FrontWalk/NobleGirlFoward3.png<>uid://b6urqqybkbppk::::res://Assets/Characters/NobleGirl/Original/FrontWalk/NobleGirlFoward4.png<>uid://ds54h76cupr02::::res://Assets/Characters/NobleGirl/Original/BackWalk/NobleGirlBack2.png<>uid://oxilrrw1w8um::::res://Assets/Characters/NobleGirl/Original/BackWalk/NobleGirlBack3.png<>uid://ejhienmujppw::::res://Assets/Characters/NobleGirl/Original/BackWalk/NobleGirlBack4.png<>uid://dlcmih6idxqcg::::res://Assets/Characters/NobleGirl/Original/SideWalk/NobleGirlSide2.png<>uid://c7jlb7nl7iwgs::::res://Assets/Characters/NobleGirl/Original/SideWalk/NobleGirlSide3.png<>uid://cl0ig8u84er72::::res://Assets/Characters/NobleGirl/Original/SideWalk/NobleGirlSide4.png<>uid://c2aaxwpf26q21::::res://Scripts/player_animation_tree.gd
-::res://Scripts/::1741768823
+::res://Resources/::1741855070
+player_animation_state_machine.tres::AnimationNodeStateMachine::547173232676675111::1741855070::0::1::::<><><>0<>0<><>::uid://qs6bl66cio7i::::res://Resources/player_walk_blend.tres
+player_walk_blend.tres::AnimationNodeBlendSpace2D::1162064937408550400::1741855070::0::1::::<><><>0<>0<><>::
+::res://Scenes/::1741855070
+player.tscn::PackedScene::5685719263707443847::1741855070::0::1::::<><><>0<>0<><>::uid://byejxma2rftwl::::res://Scripts/player.gd<>uid://c51osajpdtfw0::::res://Assets/Characters/NobleGirl/Original/FrontWalk/NobleGirlFoward1.png<>uid://buea3pdqvgfgm::::res://Assets/Characters/NobleGirl/Original/BackWalk/NobleGirlBack1.png<>uid://h2b4l4gerrtv::::res://Resources/player_animation_state_machine.tres<>uid://c66big0n4ol5n::::res://Assets/Characters/NobleGirl/Original/SideWalk/NobleGirlSide1.png<>uid://cyhmgr8suoew7::::res://Assets/Characters/NobleGirl/Original/FrontWalk/NobleGirlFoward2.png<>uid://eiygn5ab8diu::::res://Assets/Characters/NobleGirl/Original/FrontWalk/NobleGirlFoward3.png<>uid://b6urqqybkbppk::::res://Assets/Characters/NobleGirl/Original/FrontWalk/NobleGirlFoward4.png<>uid://ds54h76cupr02::::res://Assets/Characters/NobleGirl/Original/BackWalk/NobleGirlBack2.png<>uid://oxilrrw1w8um::::res://Assets/Characters/NobleGirl/Original/BackWalk/NobleGirlBack3.png<>uid://ejhienmujppw::::res://Assets/Characters/NobleGirl/Original/BackWalk/NobleGirlBack4.png<>uid://dlcmih6idxqcg::::res://Assets/Characters/NobleGirl/Original/SideWalk/NobleGirlSide2.png<>uid://c7jlb7nl7iwgs::::res://Assets/Characters/NobleGirl/Original/SideWalk/NobleGirlSide3.png<>uid://cl0ig8u84er72::::res://Assets/Characters/NobleGirl/Original/SideWalk/NobleGirlSide4.png<>uid://c2aaxwpf26q21::::res://Scripts/player_animation_tree.gd
+::res://Scripts/::1741772285
 character_state_machine.gd::GDScript/GDScript::6122994517472203637::1741693773::0::1::::CharacterStateMachine<>Node<><>0<>0<><>::
-player.gd::GDScript::3879351892303524949::1741768823::0::1::::Player<>Node2D<><>0<>0<><>::
-player_animation_tree.gd::GDScript::6667982397823154552::1741768742::0::1::::<>Node2D<><>0<>0<><>::
+player.gd::GDScript/GDScript::4079798599746723291::1741772285::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+player_animation_tree.gd::GDScript/GDScript::6667982397823154552::1741772285::0::1::::<>Node2D<><>0<>0<><>::
 state.gd::GDScript/GDScript::6177742393736745664::1741693773::0::1::::State<>Node<><>0<>0<><>::
