@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8j1okmhlsslk"]
+
+[ext_resource type="PackedScene" uid="uid://cnag73hemblrr" path="res://Scenes/player.tscn" id="1_dtjkg"]
+[ext_resource type="PackedScene" uid="uid://dv1b3dswjuko" path="res://Scenes/treasure_chest.tscn" id="2_eglq2"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_dtjkg")]
+position = Vector2(734, 301)
+
+[node name="TreasureChest" parent="." instance=ExtResource("2_eglq2")]
+position = Vector2(588, 339)
+interaction_name = "Chest 1"
+
+[node name="TreasureChest2" parent="." instance=ExtResource("2_eglq2")]
+position = Vector2(700, 423)
+interaction_name = "Chest 2"
+
+[node name="TreasureChest3" parent="." instance=ExtResource("2_eglq2")]
+position = Vector2(499, 404)
+interaction_name = "Chest 3"

@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://c7jlb7nl7iwgs" path="res://Assets/Characters/NobleGirl/Original/SideWalk/NobleGirlSide3.png" id="11_fs7ks"]
 [ext_resource type="Texture2D" uid="uid://cl0ig8u84er72" path="res://Assets/Characters/NobleGirl/Original/SideWalk/NobleGirlSide4.png" id="12_l6n3p"]
 [ext_resource type="Script" uid="uid://c2aaxwpf26q21" path="res://Scripts/player_animation_tree.gd" id="13_ukyrk"]
+[ext_resource type="PackedScene" uid="uid://cju1o4cg6okvr" path="res://Scenes/interacting_component.tscn" id="16_fd4e3"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_fd4e3"]
 nodes/AnimationNodeStateMachine/node = ExtResource("3_h4iuc")
@@ -84,18 +85,6 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 16)]
-}
 
 [sub_resource type="Animation" id="Animation_fkybt"]
 resource_name = "idle_down"
@@ -159,18 +148,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 15)]
 }
 
 [sub_resource type="Animation" id="Animation_8erm5"]
@@ -236,18 +213,6 @@ tracks/4/keys = {
 "update": 1,
 "values": [true]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-10, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_f1ek2"]
 resource_name = "idle_right"
@@ -311,18 +276,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(10, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_3smsa"]
@@ -388,18 +341,6 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -15)]
-}
 
 [sub_resource type="Animation" id="Animation_olqyp"]
 resource_name = "walk_down"
@@ -463,18 +404,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 15)]
 }
 
 [sub_resource type="Animation" id="Animation_2ijsl"]
@@ -540,18 +469,6 @@ tracks/4/keys = {
 "update": 1,
 "values": [0]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-10, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_bi64h"]
 resource_name = "walk_right"
@@ -615,18 +532,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(10, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_wpjfl"]
@@ -692,18 +597,6 @@ tracks/4/keys = {
 "update": 1,
 "values": [0]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -15)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tx1dd"]
 _data = {
@@ -721,8 +614,6 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h4iuc"]
 radius = 8.0
 height = 34.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fd4e3"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_7dp3o")
@@ -751,10 +642,4 @@ player = NodePath("..")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_h4iuc")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(0, 16)
-collision_layer = 2
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_fd4e3")
+[node name="InteractingComponent" parent="." instance=ExtResource("16_fd4e3")]

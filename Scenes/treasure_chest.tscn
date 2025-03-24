@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://dv1b3dswjuko"]
+
+[ext_resource type="Script" uid="uid://g1ecmqywc6mt" path="res://Scripts/treasure_chest.gd" id="1_77sd8"]
+[ext_resource type="Texture2D" uid="uid://cfeqm3eijosix" path="res://Assets/Anokolisa's Legacy-Fantasy - High Forest 2.3 Chest/Assets/Interior-01.png" id="1_bsmnj"]
+[ext_resource type="PackedScene" uid="uid://c8x480xox5ici" path="res://Scenes/interactable.tscn" id="2_yx78l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77sd8"]
+size = Vector2(31, 28)
+
+[sub_resource type="Animation" id="Animation_bsmnj"]
+resource_name = "chest_closed"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(49, 85, 30, 27)]
+}
+
+[sub_resource type="Animation" id="Animation_yx78l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(49, 85, 30, 27)]
+}
+
+[sub_resource type="Animation" id="Animation_77sd8"]
+resource_name = "chest_opened"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(49, 115, 30, 29)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6h1uq"]
+_data = {
+&"RESET": SubResource("Animation_yx78l"),
+&"chest_closed": SubResource("Animation_bsmnj"),
+&"chest_opened": SubResource("Animation_77sd8")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yx78l"]
+radius = 30.3645
+
+[node name="TreasureChest" type="StaticBody2D"]
+script = ExtResource("1_77sd8")
+interaction_name = "Open Chest"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bsmnj")
+region_enabled = true
+region_rect = Rect2(49, 85, 30, 27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_77sd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6h1uq")
+}
+autoplay = "chest_closed"
+
+[node name="Interactable" parent="." instance=ExtResource("2_yx78l")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_yx78l")

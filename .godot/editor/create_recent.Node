@@ -1,9 +1,13 @@
 CollisionShape2D
+AnimationPlayer
+TileMapLayer
+Sprite2D
+StaticBody2D
+CanvasLayer
+Label
 Area2D
 CharacterBody2D
 Node2D
 Node
-AnimationPlayer
 AnimationTree
-Sprite2D
 AnimatedSprite2D

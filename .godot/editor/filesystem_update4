@@ -1,3 +1,10 @@
-res://Scenes/player.tscn
+res://Scenes/interacting_component.tscn
 res://Resources/player_walk_blend.tres
 res://Resources/player_animation_state_machine.tres
+res://Scripts/interacting_component.gd
+res://Scenes/treasure_chest.tscn
+res://Scripts/treasure_chest.gd
+res://Scenes/player.tscn
+res://Scenes/interactable.tscn
+res://Scenes/test_level.tscn
+res://Scripts/interactable.gd
